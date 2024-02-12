@@ -22,12 +22,12 @@ function createStar(index) {
   const img = document.createElement('img');
   // URLs of the images for each star
   const imageUrls = [
-    "https://github.com/vihaanlab/website/assets/1.jpg",
-    "https://github.com/vihaanlab/website/assets/2.jpg",
-    "https://github.com/vihaanlab/website/assets/3.jpg",
-    "https://github.com/vihaanlab/website/assets/4.jpg",
-    "https://github.com/vihaanlab/website/assets/5.jpg",
-    "https://github.com/vihaanlab/website/assets/6.jpg"
+    "https://github.com/vihaanlab/website/blob/main/assets/1.jpg",
+    "https://github.com/vihaanlab/website/blob/main/assets/2.jpg",
+    "https://github.com/vihaanlab/website/blob/main/assets/3.jpg",
+    "https://github.com/vihaanlab/website/blob/main/assets/4.jpg",
+    "https://github.com/vihaanlab/website/blob/main/assets/5.jpg",
+    "https://github.com/vihaanlab/website/blob/main/assets/6.jpg"
   ];
   img.src = imageUrls[index];
   star.appendChild(img);
@@ -77,9 +77,9 @@ function generateCards() {
   const positions = []; // Array to store used positions
 
   const gifUrls = [
-    "https://github.com/vihaanlab/website/assets/1.gif",
-    "https://github.com/vihaanlab/website/assets/2.gif",
-    "https://github.com/vihaanlab/website/assets/3.gif"
+    "https://github.com/vihaanlab/website/blob/main/assets/1.gif",
+    "https://github.com/vihaanlab/website/blob/main/assets/2.gif",
+    "https://github.com/vihaanlab/website/blob/main/assets/3.gif"
   ];
 
   for (let i = 0; i < numCards; i++) {
