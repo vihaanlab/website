@@ -17,8 +17,8 @@ body, html {
 
 .star {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   animation: rain 15s linear infinite;
   overflow: hidden;
 }
@@ -26,12 +26,12 @@ body, html {
 .star img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 63%, 82% 100%, 50% 75%, 18% 100%, 31% 63%, 0% 38%, 37% 38%);
 }
 
 @keyframes rain {
-  0% { transform: translateY(-200px) rotate(0deg); opacity: 0; }
+  0% { transform: translateY(-200px) rotate(0deg); opacity: 1; }
   50% { transform: translateY(100vh) rotate(360deg); opacity: 1; }
   100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
 }
@@ -63,8 +63,8 @@ body, html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 30vw; /* 30% of the viewport width */
-  height: auto;/* Adjust the height as needed */
+  width: auto; /* 30% of the viewport width */
+  height: 50vh;/* Adjust the height as needed */
   max-width: none;
   max-height: none;
   z-index: 1000;
