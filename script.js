@@ -67,6 +67,12 @@ function generateCards() {
 
   const positions = []; // Array to store used positions
 
+  const gifUrls = [
+    "https://github.com/vihaanlab/website/assets/159790776/361e0d53-6e91-4a37-9b0e-a1a0b92d0ff0.gif",
+    "https://github.com/vihaanlab/website/assets/159790776/9fab4cd9-4c9e-4ebf-96bd-a2e1335809a6.gif",
+    "https://github.com/vihaanlab/website/assets/159790776/9b4a14d0-eefa-44de-b9bd-f5d48afdcde9.gif"
+  ];
+
   for (let i = 0; i < numCards; i++) {
     let tooClose; // Declare tooClose variable here
 
@@ -92,7 +98,7 @@ function generateCards() {
     cardContent.classList.add('card-content');
 
     const img = document.createElement('img');
-    img.src = `https://media.giphy.com/media/l0Exotv5MzjrSxyRm/giphy.gif`;
+    img.src = gifUrls[i];
 
     cardContent.appendChild(img);
     card.appendChild(cardContent);
