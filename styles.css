@@ -64,7 +64,7 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   width: auto; /* 30% of the viewport width */
-  height: 75vh;/* Adjust the height as needed */
+  height: 50vh;/* Adjust the height as needed */
   max-width: none;
   max-height: none;
   z-index: 1000;
