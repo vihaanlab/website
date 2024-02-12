@@ -8,7 +8,7 @@ function showStarsScreen() {
   document.getElementById('stars').style.display = 'block';
 
   // Create stars
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 6; i++) {
     createStar(i);
   }
 }
@@ -20,7 +20,16 @@ function createStar(index) {
   star.style.animationDuration = `${Math.random() * 20 + 10}s`; // Randomize animation duration between 10 to 30 seconds
   star.style.animationDelay = `${Math.random() * 10}s`; // Randomize animation delay between 0 to 10 seconds
   const img = document.createElement('img');
-  img.src = `https://source.unsplash.com/random/100x100/?girl&${index}`;
+  // URLs of the images for each star
+  const imageUrls = [
+    "https://github.com/vihaanlab/website/assets/159790776/f1e1f669-ffe7-4315-af21-962bcf01ce5e.jpg",
+    "https://github.com/vihaanlab/website/assets/159790776/6452b237-a591-41ae-9de2-ae796e023120.jpg",
+    "https://github.com/vihaanlab/website/assets/159790776/8903c837-5c1d-4a9e-8820-69a8b36ed35d.jpg",
+    "https://github.com/vihaanlab/website/assets/159790776/282df321-d93d-4a6e-8bea-e4bc1f75639b.jpg",
+    "https://github.com/vihaanlab/website/assets/159790776/59a79e92-b669-4240-9d61-eb859dfdce2f.jpg",
+    "https://github.com/vihaanlab/website/assets/159790776/613fe808-a59d-450f-ae5f-3ff6bbca48c7.jpg"
+  ];
+  img.src = imageUrls[index];
   star.appendChild(img);
   document.getElementById('stars').appendChild(star);
   
