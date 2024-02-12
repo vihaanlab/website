@@ -60,8 +60,8 @@ body, html {
 
 #full-screen-image {
   position: absolute;
-  top: 0%;
-  left: 0%;
+  top: 30%;
+  left: 30%;
   transform: translate(-50%, -50%);
   width: auto; /* 30% of the viewport width */
   height: 75vh;/* Adjust the height as needed */
