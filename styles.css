@@ -62,7 +62,7 @@ body, html {
   position: absolute;
   top: 1%;
   left: 1%;
-  transform: translateY(-50%);
+  transform: translateX(-50%);
   width: auto; /* 30% of the viewport width */
   height: 50vh;/* Adjust the height as needed */
   max-width: none;
