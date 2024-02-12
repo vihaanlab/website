@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome and Stars Raining Screen</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="welcome-screen">
+  <h1>Welcome!</h1>
+  <div id="card-container">
+    <!-- Cards will be dynamically generated here -->
+  </div>
+</div>
+
+<div id="stars" style="display: none;">
+  <div id="full-screen-view">
+  <span class="close-btn" onclick="closeFullScreen()">&times;</span>
+  <img id="full-screen-image" src="" alt="Full Screen Image">
+  <div id="compliment"></div>
+</div>
+
+<div id="background">
+  <div id="stars"></div>
+  <div id="bottom-text">Click on Stars</div>
+</div>
+  <!-- Stars will be generated dynamically by JavaScript -->
+</div>
+
+<div id="full-screen-view">
+  <span class="close-btn" onclick="closeFullScreen()">&times;</span>
+  <img id="full-screen-image" src="" alt="Full Screen Image">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
