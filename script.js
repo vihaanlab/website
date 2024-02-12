@@ -68,7 +68,7 @@ function generateCompliment() {
 
 function generateCards() {
   const cardContainer = document.getElementById('card-container');
-  const numCards = 5; // Number of cards to generate
+  const numCards = 3; // Number of cards to generate
   const minDistance = 150; // Minimum distance between cards
 
   const cardWidth = 100; // Width of each card
