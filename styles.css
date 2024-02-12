@@ -72,7 +72,7 @@ body, html {
 
 #compliment {
   position: absolute;
-  bottom: 100px;
+  top: 100px;
   left: 1%;
 /*   transform: translateX(-50%); */
   color: #fff;
