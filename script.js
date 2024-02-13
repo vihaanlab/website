@@ -1,6 +1,12 @@
 window.onload = function() {
   generateCards(); 
   // Generate cards on page load
+  playBackgroundAudio();
+}
+
+function playBackgroundAudio() {
+  const audio = document.getElementById('background-audio');
+  audio.play();
 }
 
 function showStarsScreen() {
