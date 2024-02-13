@@ -1,12 +1,6 @@
 window.onload = function() {
   generateCards(); 
   // Generate cards on page load
-  playBackgroundAudio();
-}
-
-function playBackgroundAudio() {
-  const audio = document.getElementById('background-audio');
-  audio.play();
 }
 
 function showStarsScreen() {
@@ -17,6 +11,11 @@ function showStarsScreen() {
   for (let i = 0; i < 6; i++) {
     createStar(i);
   }
+
+  const backgroundAudio = document.getElementById('background-audio');
+  backgroundAudio.play().catch(error => {
+    console.error('Failed to play audio:', error);
+  });
 }
 
 function createStar(index) {
