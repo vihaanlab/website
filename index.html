@@ -87,15 +87,23 @@
 
         document.querySelector(".no").addEventListener("click", function () {
             var apologyMessages = [
-                "Yarr kar do naa maaf ab itna bhi 😕",
                 "I promise I'll learn from this mistake and do better next time 🤞",
-                "Ab Kitna bhav khogi chudail kahi ki 😒 maaf karo",
-                "I understand if you're angry, but I hope you can forgive me eventually 😞",
-                "I miss our friendship, and I'm sorry for anything that hurt you 😢",
+                "I understand if you're angry, but I hope you can forgive me eventually",
+                "I miss our friendship, and I'm sorry for anything that hurt you ",
+                "Yarr maan bhi jaao na abb",
                 "Let's put this behind us and move forward together 🌟",
                 "I'm sorry for causing you pain, please accept my apology.💐",
-                "Forgive me, I never meant to hurt you 🌹"
-
+                "Forgive me, I never meant to hurt you 🌹",
+                "Yarr kar do naa maaf ab itna bhi 😕",
+                "I deeply regret my actions and I'm sincerely sorry for any pain I've caused you.",
+                "I know I messed up, but I value our friendship and I hope you can forgive me. 🙏",
+                "Please accept my heartfelt apology. I never intended to hurt you. 💔",
+                "I'm truly sorry for my behavior. Can we please talk and work things out? 🗣️",
+                "I apologize for my mistakes and I'm committed to making things right. 💪",
+                "I'm sorry if I've let you down. You mean a lot to me and I'll do better. ❤️",
+                "I'm asking for your forgiveness with an open heart. Will you give me another chance? 💖",
+                 "Ab Kitna bhav khogi chudail kahi ki 😒 maaf karo",
+                "I'm willing to make amends and earn back your trust. Please let me know how I can do that. 🌈"
             ];
             var randomIndex = Math.floor(Math.random() * apologyMessages.length);
             document.getElementById("initial-card").querySelector("p").textContent = apologyMessages[randomIndex];
