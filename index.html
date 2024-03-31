@@ -1,46 +1,106 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Welcome Chudail</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f3f3;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .message-input {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .submit-button {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        button.yes {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        button.no {
+            background-color: #f44336;
+            color: #fff;
+        }
+    </style>
 </head>
+
 <body>
+    <div class="card" id="initial-card">
+        <h2>Sorry for everything</h2>
+        <p>Dear friend, I am sorry for any inconvenience or hurt I may have caused you. Can we move past this? </p>
+        <button class="yes">Ha Maaf Kiya 😊</button>
+        <button class="no">Nahi 😕</button>
+    </div>
 
-<div id="welcome-screen">
-  <h1>Welcome Chudail!</h1>
-  <h2>Click on the Card..</h2>
-  <div id="card-container">
-    <!-- Cards will be dynamically generated here -->
-  </div>
-</div>
+    <div class="card" id="message-card" style="display: none;">
+        <h2>Maaf karne ke liye shukriya ab Kuch Message karo</h2>
+        <form id="message-form" method="POST" action="https://formspree.io/f/mleqppka">
+            <textarea class="message-input" name="message" placeholder="Enter your message..."></textarea>
+            <!-- Default email set -->
+            <input type="hidden" name="_replyto" value="infouslabs@gmail.com">
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
 
-<div id="stars" style="display: none;">
-  <div id="full-screen-view">
-    <span class="close-btn" onclick="closeFullScreen()">&times;</span>
-    <img id="full-screen-image" src="" alt="Full Screen Image">
-    <div id="compliment"></div>
-  </div>
+    <script>
+        document.querySelector(".yes").addEventListener("click", function () {
+            document.getElementById("initial-card").style.display = "none";
+            document.getElementById("message-card").style.display = "block";
+        });
 
-  <div id="background">
-    <div id="stars"></div>
-    <div id="bottom-text">Click on Stars</div>
-  </div>
-  <!-- Stars will be generated dynamically by JavaScript -->
-</div>
+        document.querySelector(".no").addEventListener("click", function () {
+            var apologyMessages = [
+                "Yarr kar do naa maaf ab itna bhi 😕",
+                "I promise I'll learn from this mistake and do better next time 🤞",
+                "Ab Kitna bhav khogi chudail kahi ki 😒 maaf karo",
+                "I understand if you're angry, but I hope you can forgive me eventually 😞",
+                "I miss our friendship, and I'm sorry for anything that hurt you 😢",
+                "Let's put this behind us and move forward together 🌟",
+                "I'm sorry for causing you pain, please accept my apology.💐",
+                "Forgive me, I never meant to hurt you 🌹"
 
-<div id="full-screen-view">
-  <span class="close-btn" onclick="closeFullScreen()">&times;</span>
-  <img id="full-screen-image" src="" alt="Full Screen Image">
-</div>
-
-<audio id="background-audio" loop>
-  <source src="assets/background.mpeg" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
-<script src="script.js"></script>
+            ];
+            var randomIndex = Math.floor(Math.random() * apologyMessages.length);
+            document.getElementById("initial-card").querySelector("p").textContent = apologyMessages[randomIndex];
+        });
+    </script>
 </body>
+
 </html>
